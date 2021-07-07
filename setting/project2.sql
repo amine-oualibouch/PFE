@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 06, 2021 at 12:18 PM
+-- Generation Time: Jul 07, 2021 at 08:40 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -88,6 +88,33 @@ INSERT INTO `meadmin` (`id`, `admin_username`, `admin_password`, `t_staff_type`)
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Message`
+--
+
+CREATE TABLE `Message` (
+  `id` int(5) UNSIGNED NOT NULL,
+  `content` text NOT NULL,
+  `user_id` varchar(25) DEFAULT NULL,
+  `sender_id` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Message`
+--
+
+INSERT INTO `Message` (`id`, `content`, `user_id`, `sender_id`) VALUES
+(1, 'hello', 'student', 'parent'),
+(2, 'hello', 'teacher2', 'admin'),
+(3, 'You need to improve your skills', 'student', 'teacher1'),
+(4, '                  \r\nhklhlkh', 'admin', 'dad'),
+(5, 'hello teacher                  \r\n                ', 'teacher1', 'student'),
+(6, ' hello me                 \r\n    ', 'student', 'student'),
+(7, ' bonjour                 \r\n                ', 'admin', 'student'),
+(8, ' bonjour                 \r\n                ', 'admin', 'student');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `parents_info`
 --
 
@@ -158,15 +185,10 @@ CREATE TABLE `st_info` (
 --
 
 INSERT INTO `st_info` (`st_id`, `st_fullname`, `st_username`, `st_password`, `st_grade`, `roll_no`, `st_dob`, `st_address`, `st_district`, `st_gender`, `st_father`, `st_mother`, `st_parents_contact`) VALUES
-(1, 'Student name', 'student', 'student', 10, 1, '12 Jan 1999', 'XX XX XX', 'Bhaktapur', 'Male', 'St dad', 'St mom', '9800000'),
-(2, 'Hari Thapa', 'hari2055', 'asdf', 10, 12, '11/17/2055', 'Kausaltar', 'Bhaktapur', 'Male', 'Ram Thapa', 'Sita Thapa', '9812222200'),
-(5, 'Saugat Gautam', 'saugat2055', 'saugat2055', 7, 12, '12 Jan 1999', 'Jadibuti', 'Kathmandu', 'Male', 'John Gautam', 'Sita Gautam', '9802212222'),
-(3, 'qwe', 'asdf', '1234', 8, 11, '27 Dec 1998', 'Banepa', 'Kavre', 'Male', 'aasd', 'aasdf', '9812222'),
-(4, 'Robin Dhakal', 'robin2053', '123456', 10, 1, '20 Jan 1994', 'Patan', 'Lalitpur', 'Male', 'Rajan Dhakal', 'Rama Dhakal', '9841111'),
-(9, 'rajkumar xyz', 'rajkumar', 'abcdef', 10, 5, '13 Jan 2000', 'Kausaltar', 'Bhaktapur', 'Male', 'Abc xyz', 'Bcd xyz', '98000000'),
-(8, 'Your Name', 'yourname', 'yourname1', 5, 1, '27 Jan 2000', 'Lokanthali', 'Bhaktapur', 'Male', 'John Cena', 'Sita Cena', '9811111111'),
-(10, 'dsdsdsd', 'aaaa', 'abc', 2, 1, '1 Jan 2000', 'Tinkune', 'Kathmandu', 'Male', 'abbb', 'acc', '123456'),
-(12, 'dsdsds', 'qq', '123', 3, 1, '28 jan 2000', 'adsd', 'dsdsd', 'Male', 'dsds', 'ddsds', '12121');
+(1, 'Student name', 'student', 'student', 10, 1, '12 Jan 1999', 'XX XX XX', 'xx xx xx', 'Male', 'St dad', 'St mom', '9800000'),
+(2, 'St2 name', 'student2', 'asdf', 10, 12, '11/17/2055', 'XX XX XX', 'xx xx xx', 'Male', 'st2 dad', 'st2 mom', '9812222200'),
+(3, 'qwe', 'asdf', '1234', 8, 11, '27 Dec 1998', 'XX XX XX', 'xx xx xx', 'Male', 'aasd', 'aasdf', '9812222'),
+(8, 'Your Name', 'yourname', 'yourname1', 5, 1, '27 Jan 2000', 'xx xx xx', 'xx xx xx', 'Male', 'John Cena', 'Sita Cena', '9811111111');
 
 -- --------------------------------------------------------
 
@@ -247,11 +269,8 @@ CREATE TABLE `teacher_info` (
 --
 
 INSERT INTO `teacher_info` (`t_id`, `t_fullname`, `t_address`, `t_email`, `t_username`, `t_pass`, `t_father`, `t_mother`, `t_dob`, `t_qualification`, `t_contact`, `t_staff_type`, `t_gender`) VALUES
-(1, 'Teacher 1', 'Adress1', 't1@gmail.com', 'ramsir', 'ram', 'fater ', 'mother', '20 Feb 1978', 'Master ', 986811111, 'Teacher', 'Male'),
-(2, 'teacher2', 'XXXX', 'abc@xyz', 'teacher', '12345', 'ABC XYZ', 'Bcd Xyz', '29 feb 2000', 'Master', 98680000, 'Admin', 'Male'),
-(3, 'Hello', 'Kathmandu', 'hello@gmail.com', 'hello', 'hello', 'hello abc ', 'world abc', '20 jan 1885', 'Master', 98680222, 'Teacher', 'Male'),
-(5, 'Sanjay', 'Bhaktapur', 'sanjay@gmail.com', 'sanjay', 'sanjay', 'Abc xyz', 'bcd xyz', '22 feb 2000', 'Master ', 9866666, 'Teacher', 'Male'),
-(6, 'Ram Karki', 'Lokanthali', 'ram@hhkhkjk', 'ram1878', 'ram1878', 'Hari Karki', 'Rita Karki', '12 Jan 1878', 'Master', 1234567890, 'Teacher', 'Male');
+(1, 'Teacher 1', 'Adress1', 't1@gmail.com', 'teacher1', 'teacher1', 'fater ', 'mother', '20 Feb 1978', 'Master ', 986811111, 'Teacher', 'Male'),
+(2, 'teacher2', 'XXXX', 'abc@xyz', 'teacher2', '1234', 'ABC XYZ', 'Bcd Xyz', '29 feb 2000', 'Master', 98680000, 'Teacher', 'Male');
 
 --
 -- Indexes for dumped tables
@@ -273,6 +292,12 @@ ALTER TABLE `general_setting`
 -- Indexes for table `meadmin`
 --
 ALTER TABLE `meadmin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `Message`
+--
+ALTER TABLE `Message`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -332,6 +357,12 @@ ALTER TABLE `general_setting`
 --
 ALTER TABLE `meadmin`
   MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `Message`
+--
+ALTER TABLE `Message`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `result`
