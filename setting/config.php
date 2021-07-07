@@ -122,6 +122,13 @@ class project2
 		return $teacher_info_instudent_run;
 		
 	}
+	public function message_info_in_student($st_username)
+	{
+		$message_info_instudent_select = "select * from Message where user_id='$st_username'";
+		$message_info_instudent_run = $this->connectdb->query($message_info_instudent_select);
+		return $message_info_instudent_run;
+		
+	}
 	////////////////////////End Teacher Info ------------//////////////////////
 	
 	///////////////////////// user password update //////////
@@ -147,6 +154,15 @@ class project2
 	}
 	
 	///////////////////------- end user password update --------------//////////////
+	////////////----- Add message ---- ///////////////
+	public function add_message($content,$user_id,$sender_id)
+	{
+		$add_message = "insert into message(content,user_id,sender_id) value('$content','$user_id',
+		'$sender_id')";
+		$add_message_run = $this->connectdb->query($add_message);
+		return $add_message_run;
+	}
+	////////////---- End Message --------- ////////////
 	
 	///////////////////-------- display subject in admin ----------------////////
 	public function subject_info()

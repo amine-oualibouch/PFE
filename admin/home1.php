@@ -13,29 +13,12 @@
 											<li><a href="#section-2" class="icon-cup"><i class="lnr lnr-lighter"></i> <span>Results</span></a></li>
 											<li><a href="#section-3" class="icon-food"><i class="fa fa-cutlery"></i> <span>Teachers</span></a></li>
 											<li><a href="#section-4" class="icon-lab"><i class="fa fa-flask"></i> <span>Subject</span></a></li>
-											<li><a href="#section-5" class="icon-truck"><i class="fa fa-truck"></i> <span>Order</span></a></li>
+											
 										</ul>
 									</nav>
 									<div class="content tab">
 										<section id="section-1">
-											<div class="mediabox">
-												<strong>Personal Information</strong>
-												<p>	<strong>Welcome,</strong>
-												<?php echo $info_display['t_fullname']; ?>
-											</p>
-												<p>	<strong>Qualification:</strong>
-												<?php echo $info_display['t_qualification']; ?>
-											</p>
-												<p>	<strong>Username:</strong>
-												<?php echo $info_display['t_username']; ?>
-											</p>
-												<p>	<strong>Gender:</strong>
-												<?php echo $info_display['t_gender']; ?>
-											</p>
-												<p>	<strong>DOB:</strong>
-												<?php echo $info_display['t_dob']; ?>
-											</p>
-											</div>
+										
 											<div class="mediabox">
 												<strong>Contact Details</strong>
 												<p>	<strong>Phone:</strong>
@@ -49,16 +32,7 @@
 											</p>	
 												
 											</div>
-											<div class="mediabox">
-												<strong>Parents Detail</strong>
-												
-												<p>	<strong>Father:</strong>
-												<?php echo $info_display['t_father']; ?>
-											</p>
-												<p>	<strong>Mother:</strong>
-												<?php echo $info_display['t_mother']; ?>
-											</p>
-											</div>
+											
 										</section>
 										<section id="section-2">
 											<div class="mediabox">
@@ -254,20 +228,7 @@
 								</div>
 								<div class="col-md-6 map-2">
 									<div class="profile-nav alt">
-										<section class="panel">
-											<div class="user-heading alt clock-row terques-bg">
-												<h3 class="sub-tittle clock">Easy Clock </h3>
-											</div>
-											<ul id="clock">
-												<li id="sec"></li>
-												<li id="hour"></li>
-												<li id="min"></li>
-											</ul>
-
-
-
-										</section>
-
+										
 									</div>
 								</div>
 								<div class="clearfix"> </div>

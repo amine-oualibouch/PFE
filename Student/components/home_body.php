@@ -6,7 +6,7 @@
         <div class="card">
           <div class="card-body text-center">
         <div class="img-container mb-4">
-          <img src="img/1.jpg" class="card-img-top" alt="User">
+          <img src="img/1.png" class="card-img-top" alt="User">
         </div>
           <div class="card-header">
             Personal Information :
