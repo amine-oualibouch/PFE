@@ -20,12 +20,14 @@ else
 
 
 ?>
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+				
+
+
+
+
+
+
+
 <!DOCTYPE HTML>
 <html>
 
@@ -113,22 +115,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!--/sidebar-menu-->
 		<div class="sidebar-menu">
 			<header class="logo">
-				<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span
+				<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="home.php"> <span
 						id="logo">
-						<h1>MeRavi</h1>
+						<h1>Admin</h1>
 					</span>
-					<!--<img id="logo" src="" alt="Logo"/>-->
 				</a>
 			</header>
 			<div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
 			<!--/down-->
 			<div class="down">
-				<a href="index.html"><img src="images/admin.jpg"></a>
-				<a href="index.php"><span class=" name-caret"><?php echo $info_display['t_fullname']; ?></span></a>
-				<p>System Administrator in Company</p>
+				<a href="home.php"><img src="images/1.png" height= "120px"></a>
+				<a href="home.php"><span class=" name-caret"><?php echo $info_display['t_fullname']; ?></span></a>
+				<p>Administrator</p>
 				<ul>
-					<li><a class="tooltips" href="index.html"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
-					<li><a class="tooltips" href="index.html"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
+					<li><a class="tooltips" href="home.php"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+					<li><a class="tooltips" href="home.php"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
 					<li><a class="tooltips" href="logouts.php"><span>Log out</span><i
 								class="lnr lnr-power-switch"></i></a></li>
 				</ul>

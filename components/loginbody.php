@@ -4,7 +4,10 @@
     <div class="row">
         <div class="col-md-4 col-xs-12">
           <a href="t_login.php">
-            <img src="img/6.svg"  width="400px" height="400px" class="center-block img-fluid" />
+            <img src="img/6.svg"  
+            width="400px" 
+            height="400px" 
+            class="center-block img-fluid " />
           </a>
           <figcaption><center> Teachers</center> </figcaption>
         </div>

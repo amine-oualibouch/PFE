@@ -1,10 +1,11 @@
+
 		<div class="outter-wp">
 					<!--/tabs-->
 					<div class="tab-main">
 						<!--/tabs-inner-->
 						<div class="tab-inner">
 							<div id="tabs" class="tabs">
-								<h2 class="inner-tittle">Welcome, <?php echo $info_display['t_fullname']; ?>  </h2>
+								<h2 class="inner-tittle">Welcome, Admin </h2>
 								<div class="graph">
 									<nav>
 										<ul>
