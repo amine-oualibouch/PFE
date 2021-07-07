@@ -22,9 +22,9 @@
                                   </thead> 
                                   <tbody>
                               <?php 
-                              $st_username = $student_name_display['st_username'];
+                              $st_username = $teacher_name_display['t_fullname'];
                               $sn = 1;
-                              $message_info_in_student = $ravi->message_info_in_student($st_username);
+                              $message_info_in_student = $ravi->message_info($st_username);
                                 while($message_info = $message_info_in_student->fetch_assoc())    { 
                                     ?>
                                     

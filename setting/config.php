@@ -129,6 +129,14 @@ class project2
 		return $message_info_instudent_run;
 		
 	}
+	public function message_info($st_username)
+	{
+		$message_info_instudent_select = "select * from Message where user_id='$st_username'";
+		$message_info_instudent_run = $this->connectdb->query($message_info_instudent_select);
+		return $message_info_instudent_run;
+		
+	}
+	
 	////////////////////////End Teacher Info ------------//////////////////////
 	
 	///////////////////////// user password update //////////

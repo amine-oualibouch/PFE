@@ -1,12 +1,38 @@
+<?php 
+ 
+ if(isset($_POST['submit']))
+ {
+   
+   $content = $_POST['content'];
+   $user_id = $_POST['user_id'];
+   $sender_id = $_POST['sender_id'];
+   
+   if($content=="" or $user_id=="" or $sender_id=="")
+   {
+     echo "<script>alert('please fill form and Add Student');</script>";
+   }
+   else
+   {
+     
+     $add_message_done = $ravi->add_message($content,$user_id,$sender_id);
+     echo "<script>alert('Message sent');</script>";
+     
+   }
+   
+ }
+
+
+?>
+
 <!--/tabs-inner-->
 <div class="main col-11">
   <div class="row first-row">
     <div class="col-8">
-        <div class="card">
+        <div class="card" style="width: 60rem;margin:0 auto;">
           <div class="card-header">
             <center><h2>Contact a user</h2></center>
           </div>
-          <div calss="card-body" style="width: 50rem;">
+          <div calss="card-body" style="width: 50rem;margin: 0 auto;float: none;margin-bottom: 10px;">
            
               <form method="post" action="message1.php">
                 <br>
